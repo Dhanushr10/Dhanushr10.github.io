@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dhanush R – UI/UX Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gentium+Basic:wght@400;700&family=Inter:wght@400;500;600;700&family=Playfair+Display+SC:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="main-nav">
+    <div class="nav-logo">
+      <img src="img/DR LOGO.png" alt="DR" onerror="this.style.display='none'" />
+      <span>DR</span>
+    </div>
+    <div class="nav-links" id="nav-links">
+      <a href="#home"     class="nav-btn active" onclick="setActive(this);closeMenu()">
+        <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M3 12L12 4l9 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M5 10v9a1 1 0 001 1h4v-5h4v5h4a1 1 0 001-1v-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Home
+      </a>
+      <a href="#about"    class="nav-btn" onclick="setActive(this);closeMenu()">
+        <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        About
+      </a>
+      <a href="#resume"   class="nav-btn" onclick="setActive(this);closeMenu()">
+        <svg width="20" height="22" fill="none" viewBox="0 0 20 24"><rect x="2" y="1" width="16" height="22" rx="2" stroke="currentColor" stroke-width="2"/><line x1="5" y1="7" x2="15" y2="7" stroke="currentColor" stroke-width="1.5"/><line x1="5" y1="11" x2="15" y2="11" stroke="currentColor" stroke-width="1.5"/><line x1="5" y1="15" x2="11" y2="15" stroke="currentColor" stroke-width="1.5"/></svg>
+        Resume
+      </a>
+      <a href="#projects" class="nav-btn" onclick="setActive(this);closeMenu()">
+        <svg width="26" height="20" fill="none" viewBox="0 0 28 22"><rect x="1" y="1" width="26" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 21h14M14 17v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Project
+      </a>
+      <a href="#contact"  class="nav-btn" onclick="setActive(this);closeMenu()">
+        <svg width="28" height="22" fill="none" viewBox="0 0 30 24"><rect x="1" y="1" width="28" height="22" rx="3" stroke="currentColor" stroke-width="2"/><path d="M1 5l14 10L29 5" stroke="currentColor" stroke-width="2"/></svg>
+        Contact
+      </a>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero-blob"></div>
+    <div class="hero-inner">
+      <div class="hero-combine">
+        <div class="hero-content">
+          <div class="welcome-badge">Welcome to my portfolio</div>
+          <div class="hero-text">
+            <h1 class="hero-name">I'm &nbsp;<span class="grad">DHANUSH R</span></h1>
+            <p class="hero-desc">Aspiring UI/UX Designer with a strong passion for creating intuitive and visually engaging digital experiences.</p>
+            <div class="hero-btns">
+              <a href="#projects" class="btn-primary">View My Work &nbsp;→</a>
+              <a href="#contact"  class="btn-secondary">Get In Touch</a>
+            </div>
+            <div class="hero-socials">
+              <a href="https://www.linkedin.com/in/dhanush-r-043868210/" target="_blank" class="social-icon" aria-label="LinkedIn">
+                <svg width="18" height="18" fill="none" viewBox="0 0 18 18"><rect x="1" y="1" width="16" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><circle cx="5" cy="6" r="1" fill="currentColor"/><line x1="5" y1="8.5" x2="5" y2="14" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="8.5" x2="8" y2="14" stroke="currentColor" stroke-width="1.5"/><path d="M8 10.5c0-1.5 1-2 2-2s2 .8 2 2V14" stroke="currentColor" stroke-width="1.5"/></svg>
+              </a>
+              <a href="https://x.com/RDhanush2004" target="_blank" class="social-icon" aria-label="Twitter">
+                <svg width="18" height="18" fill="none" viewBox="0 0 18 18"><path d="M2 2l14 14M2 16L16 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="hero-img-wrap">
+          <div class="hero-img">
+            <img src="img/DHANUSH.jpg" alt="Dhanush R"
+              onerror="this.style.display='none'" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="sec-wrap">
+    <div class="about-grid">
+      <div class="about-text reveal reveal-left">
+        <h2 class="about-heading">ABOUT ME</h2>
+        <div class="about-body">
+          <p>I'm a passionate UI/UX designer and a Computer Science engineering student at Vidyavardhaka College of Engineering, Mysuru. With a strong foundation in technology and a deep interest in user experience design, I strive to create seamless, user-friendly digital experiences.</p>
+          <p>My approach to design is a blend of problem-solving, creativity, and functionality, ensuring that every interface I craft is both visually appealing and highly intuitive. I am continuously learning and refining my skills in wireframing, prototyping, user research, and interaction design, with hands-on experience using tools like Figma and Adobe XD.</p>
+          <p>With my background in computer science, I bring a technical perspective to UI/UX design, allowing me to collaborate effectively with developers and create designs that are not just beautiful but also practical and scalable.</p>
+          <p>I'm always eager to learn, grow, and contribute to meaningful projects that enhance user experiences. Let's connect and create something amazing together!</p>
+        </div>
+      </div>
+      <div class="about-img-wrap reveal reveal-right">
+        <div class="about-img">
+          <img src="img/mario-gogh-UF5Kdm764RE-unsplash.jpg" alt="About Dhanush" onerror="this.style.display='none'" />
+        </div>
+      </div>
+    </div>
+
+    <!-- What Inspires Me -->
+    <div class="wim">
+      <h3 class="wim-title reveal">What Inspires Me</h3>
+      <div class="wim-cards">
+        <div class="wim-card reveal d1"><div class="wim-hd"><div class="wim-icon">UI/UX</div><span class="wim-label">UI/UX Design</span></div><p class="wim-desc">Crafting intuitive and delightful user experiences.</p></div>
+        <div class="wim-card reveal d2"><div class="wim-hd"><div class="wim-icon" style="font-size:26px">💡</div><span class="wim-label">Learning</span></div><p class="wim-desc">Always learning, building, and experimenting with new tech.</p></div>
+        <div class="wim-card reveal d3"><div class="wim-hd"><div class="wim-icon" style="font-size:26px">🤝</div><span class="wim-label">Teamwork</span></div><p class="wim-desc">Collaborating to bring great ideas to life.</p></div>
+        <div class="wim-card reveal d4"><div class="wim-hd"><div class="wim-icon" style="font-size:26px">🎨</div><span class="wim-label">Design</span></div><p class="wim-desc">Crafting beautiful user experiences.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- RESUME -->
+  <section id="resume">
+    <div class="sec-wrap">
+      <div class="resume-head reveal">
+        <h2 class="sec-title">RESUME</h2>
+        <button class="btn-dl" onclick="alert('Add your resume PDF link here!')">
+          Download PDF
+          <svg width="20" height="20" fill="none" viewBox="0 0 26 23"><line x1="13" y1="2" x2="13" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M7 12l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="1" y1="21" x2="25" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+
+      <!-- Education -->
+      <div class="r-sec reveal">
+        <div class="r-sec-hd">
+          <div class="r-sec-icon">
+            <svg width="32" height="32" fill="none" viewBox="0 0 32 32"><path d="M16 4L3 11l13 7 13-7-13-7z" stroke="#000" stroke-width="2" stroke-linejoin="round"/><path d="M3 11v9" stroke="#000" stroke-width="2" stroke-linecap="round"/><path d="M8 13.5v5.5a8 8 0 0016 0v-5.5" stroke="#000" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <span class="r-sec-title">EDUCATION</span>
+        </div>
+        <div class="edu-card">
+          <div class="edu-row">
+            <span class="edu-name">Bachelor of Engineering (B.E.) in Computer Science and Engineering</span>
+            <span class="edu-year">2022 – 2026</span>
+          </div>
+          <div class="edu-college-row">
+            <div class="college-logo">
+              <img src="img/vvce-logo.png" alt="VCE" onerror="this.outerHTML='<span style=font-weight:700;font-size:14px;margin:5px>VCE</span>'" />
+            </div>
+            <span class="college-name">Vidyavardhaka College Of Engineering</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="r-sec reveal" style="margin-top:50px">
+        <div class="r-sec-hd">
+          <div class="r-sec-icon">
+            <img src="img/skills_icon.png" alt="HTML" onerror="this.outerHTML='<span style=font-size:28px;font-weight:700;color:#e44d26>HTML</span>'" />
+          </div>
+          <span class="r-sec-title">SKILLS</span>
+        </div>
+        <div class="skills-wrap">
+          <div class="skills-grid">
+            <div class="skill-card reveal d1">
+              <div class="skill-hd">
+                <div class="skill-icon">
+                  <img src="img/Figma_logo.png" alt="Figma" onerror="this.outerHTML='<span style=font-size:28px></span>'" />
+                </div>
+                <span class="skill-name">FIGMA</span>
+              </div>
+              <p class="skill-desc">Experienced in Figma for collaborative UI/UX design</p>
+            </div>
+            <div class="skill-card reveal d2">
+              <div class="skill-hd">
+                <div class="skill-icon">
+                  <img src="img/wireframe_icon.png" alt="HTML" onerror="this.outerHTML='<span style=font-size:28px;font-weight:700;color:#e44d26>HTML</span>'" />
+                </div>
+                <span class="skill-name">WIREFRAMING</span>
+              </div>
+              <p class="skill-desc">Planning the blueprint of user interfaces.</p>
+            </div>
+            <div class="skill-card reveal d3">
+              <div class="skill-hd">
+                <div class="skill-icon">
+                  <img src="img/prototyping.png" alt="HTML" onerror="this.outerHTML='<span style=font-size:28px;font-weight:700;color:#e44d26>HTML</span>'" />
+                </div>
+                <span class="skill-name">PROTOTYPING</span>
+              </div>
+              <p class="skill-desc">Transforming ideas into interactive designs.</p>
+            </div>
+            <div class="skill-card reveal d4">
+              <div class="skill-hd">
+                <div class="skill-icon">
+                  <img src="img/HTML.png" alt="HTML" onerror="this.outerHTML='<span style=font-size:28px;font-weight:700;color:#e44d26>HTML</span>'" />
+                </div>
+                <span class="skill-name">HTML</span>
+              </div>
+              <p class="skill-desc">Creating clean and semantic web layouts.</p>
+            </div>
+            <div class="skill-card reveal d5">
+              <div class="skill-hd">
+                <div class="skill-icon">
+                  <img src="img/CSS.png" alt="CSS" onerror="this.outerHTML='<span style=font-size:28px;font-weight:700;color:#264de4>CSS</span>'" />
+                </div>
+                <span class="skill-name">CSS</span>
+              </div>
+              <p class="skill-desc">Adding style, color, and structure to websites.</p>
+            </div>
+            <div class="skill-card reveal d6">
+              <div class="skill-hd">
+                <div class="skill-icon">
+                  <img src="img/JS.png" alt="JavaScript" onerror="this.outerHTML='<span style=font-size:24px;font-weight:700;color:#f7df1e;background:#000;padding:4px 6px>JS</span>'" />
+                </div>
+                <span class="skill-name">JAVASCRIPT</span>
+              </div>
+              <p class="skill-desc">Bringing websites to life with dynamic features.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="r-sec reveal" style="margin-top:50px">
+        <div class="r-sec-hd">
+          <div class="r-sec-icon">
+            <svg width="30" height="36" fill="none" viewBox="0 0 30 36"><rect x="2" y="2" width="26" height="32" rx="3" stroke="#000" stroke-width="2"/><line x1="8" y1="11" x2="22" y2="11" stroke="#000" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="16" x2="22" y2="16" stroke="#000" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="21" x2="16" y2="21" stroke="#000" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <span class="r-sec-title">CERTIFICATIONS</span>
+        </div>
+
+        <div class="certs-row">
+
+          <!-- ══ GOOGLE ══ -->
+          <div class="cert-box reveal d1">
+            <p class="cert-box-label">❖ CERTIFICATE GOOGLE</p>
+            <div class="cert-dashed-border">
+              <div class="cert-deck">
+                <div class="cert-card card-back-2"><img src="img/GOOGLE_UI_UX_page-0001.jpg" alt="" /></div>
+                <div class="cert-card card-back-1"><img src="img/GOOGLE_UI_UX_page-0001.jpg" alt="" /></div>
+                <div class="cert-card card-front" ><img src="img/ui_ux_final_page-0001.jpg" alt="Google UX Certificate" /></div>
+              </div>
+            </div>
+            <div class="cert-desc-block">
+              <p class="cert-desc-title"><span style="color:#4285f4">G</span><span style="color:#e94235">O</span><span style="color:#fabb05">O</span><span style="color:#4285f4">G</span><span style="color:#34a853">L</span><span style="color:#e94235">E</span> UX DESIGN: <span style="color:#0056d2">COURSERA</span></p>
+              <p class="cert-desc-body">Build Dynamic User Interfaces (UI) for Websites — Foundations of User Experience (UX) Design. Authorized by Google and offered through Coursera.</p>
+            </div>
+          </div>
+
+          <!-- ══ SAP ══ -->
+          <div class="cert-box reveal d2">
+            <p class="cert-box-label">❖ SAP TECHNOLOGY CONSULTANT</p>
+            <div class="cert-dashed-border">
+              <div class="cert-deck">
+                <div class="cert-card card-back-2"><img src="img/SAP_1 (2)_page-0001.jpg" alt="" /></div>
+                <div class="cert-card card-back-1"><img src="img/SAP_1 (2)_page-0001.jpg" alt="" /></div>
+                <div class="cert-card card-front" ><img src="img/SAP_MAIN_page-0001.jpg" alt="SAP Technology Consultant Certificate" /></div>
+              </div>
+            </div>
+            <div class="cert-desc-block">
+              <p class="cert-desc-title">SAP Technology Consultant: <span style="color:#0056d2">COURSERA</span></p>
+              <p class="cert-desc-body">7-course Professional Certificate. SAP Professional Fundamentals, Enterprise Systems, Customer Engagement, SAP Solutions and more. Issued Dec 1, 2024.</p>
+            </div>
+          </div>
+
+        </div><!-- /.certs-row -->
+
+        <!-- ══ MINNESOTA – full width ══ -->
+        <div class="cert-box cert-box-wide reveal d3">
+          <p class="cert-box-label">❖ UNIVERSITY OF MINNESOTA</p>
+          <div class="cert-dashed-border cert-dashed-wide">
+            <div class="cert-wide-inner">
+              <div class="cert-deck cert-deck-wide">
+                <div class="cert-card card-front" ><img src="img/UI_DESIGN_page-0001.jpg" alt="University of Minnesota Certificate" /></div>
+              </div>
+              <div class="cert-desc-block">
+                <p class="cert-desc-title">UNIVERSITY OF MINNESOTA: <span style="color:#0056d2">COURSERA</span> — Introduction to UI Design</p>
+                <p class="cert-desc-body">Learned the core principles of user interface design, including usability, visual hierarchy, and interaction patterns to create intuitive digital experiences. Issued Oct 7, 2025.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.r-sec -->
+
+      <!-- Experience -->
+      <div class="r-sec reveal" style="margin-top:50px;margin-bottom:20px">
+        <div class="r-sec-hd">
+          <div class="r-sec-icon">
+            <svg width="32" height="32" fill="none" viewBox="0 0 32 32"><rect x="3" y="9" width="26" height="20" rx="2" stroke="#000" stroke-width="2"/><path d="M10 9V7a2 2 0 012-2h8a2 2 0 012 2v2" stroke="#000" stroke-width="2"/><line x1="3" y1="19" x2="29" y2="19" stroke="#000" stroke-width="2"/></svg>
+          </div>
+          <span class="r-sec-title">EXPERIENCE</span>
+        </div>
+        <div class="exp-wrap">
+          <div class="exp-years">
+            <span>2023</span>
+            <span>Present</span>
+          </div>
+          <div class="exp-timeline">
+            <div class="exp-dot"></div>
+            <div class="exp-line"></div>
+          </div>
+          <div class="exp-content">
+            <div class="exp-role">Academic &amp; Personal Projects</div>
+            <p class="exp-body">Gaining hands-on experience through academic and personal projects that strengthen my creativity, problem-solving, and user-centered design expertise.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="sec-wrap">
+      <h2 class="sec-title reveal">PROJECTS</h2>
+      <p class="proj-label reveal d1">Featured Projects</p>
+      <div class="proj-grid">
+        <div class="proj-card reveal reveal-left d2">
+          <div class="proj-bg" style="background:linear-gradient(135deg,#667eea,#764ba2)"></div>
+          <div class="proj-overlay"></div>
+          <div class="proj-content">
+            <span class="proj-tag">UI/UX Design</span>
+            <div class="proj-title">Portfolio Design</div>
+            <p class="proj-desc">Designed a complete personal portfolio with modern UI/UX principles using Figma.</p>
+            <span class="proj-arrow">→</span>
+          </div>
+        </div>
+        <div class="proj-card reveal reveal-right d3">
+          <div class="proj-bg" style="background:linear-gradient(135deg,#f093fb,#f5576c)"></div>
+          <div class="proj-overlay"></div>
+          <div class="proj-content">
+            <span class="proj-tag">App Design</span>
+            <div class="proj-title">Mobile App UI</div>
+            <p class="proj-desc">Created intuitive mobile application wireframes and high-fidelity prototypes.</p>
+            <span class="proj-arrow">→</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="sec-wrap">
+      <h2 class="contact-title reveal">GET IN TOUCH</h2>
+      <div class="contact-layout">
+
+        <!-- Info panel -->
+        <div class="contact-info reveal reveal-left">
+          <div class="contact-info-title">Contact Information</div>
+          <p class="contact-info-desc">Feel free to contact me through any of these channels, and I'll respond as soon as possible.</p>
+          <div class="ci-card">
+            <span class="ci-emoji">✉️</span>
+            <a class="ci-email" href="mailto:dhanushrwork@gmail.com">dhanushrwork@gmail.com</a>
+          </div>
+          <div class="ci-card">
+            <span class="ci-emoji">📞</span>
+            <span class="ci-phone">+91 9164332272</span>
+          </div>
+          <div class="ci-card">
+            <span class="ci-emoji">📍</span>
+            <span class="ci-loc">KARNATAKA, MYSURU</span>
+          </div>
+          <div class="social-card">
+            <div class="social-title">Social Media</div>
+            <div class="social-sub">Get connected with me on</div>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/dhanush-r-043868210/" target="_blank" class="social-icon" aria-label="LinkedIn">
+                <svg width="18" height="18" fill="none" viewBox="0 0 18 18"><rect x="1" y="1" width="16" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><circle cx="5" cy="6" r="1" fill="currentColor"/><line x1="5" y1="8.5" x2="5" y2="14" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="8.5" x2="8" y2="14" stroke="currentColor" stroke-width="1.5"/><path d="M8 10.5c0-1.5 1-2 2-2s2 .8 2 2V14" stroke="currentColor" stroke-width="1.5"/></svg>
+              </a>
+              <a href="https://x.com/RDhanush2004" target="_blank" class="social-icon" aria-label="Twitter">
+                <svg width="18" height="18" fill="none" viewBox="0 0 18 18"><path d="M2 2l14 14M2 16L16 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Message form -->
+        <div class="msg-box reveal reveal-right">
+          <div class="msg-title">Send a Message</div>
+          <p class="msg-sub">Always happy to connect! Drop a message, and I'll get back to you shortly.</p>
+          <div class="form-row">
+            <div class="form-col">
+              <label class="form-label">Name</label>
+              <input class="form-input" type="text" id="f-name" placeholder="Your name" />
+            </div>
+            <div class="form-col">
+              <label class="form-label">Email</label>
+              <input class="form-input" type="email" id="f-email" placeholder="example@email.com" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Subject</label>
+            <input class="form-input" type="text" id="f-subject" placeholder="What is the message about ?" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea class="form-input" id="f-msg" placeholder="Your message..." rows="3"></textarea>
+          </div>
+          <button class="btn-send" onclick="handleSend()">
+            <svg width="28" height="28" fill="none" viewBox="0 0 30 30"><path d="M3 15L27 3l-6 12 6 12L3 15z" stroke="white" stroke-width="2" stroke-linejoin="round"/></svg>
+            Send Message
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Dhanush R &nbsp;·&nbsp; Designed in Figma &nbsp;·&nbsp; Built with ❤️</p>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
