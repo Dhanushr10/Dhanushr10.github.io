@@ -1030,7 +1030,7 @@ footer {
   .form-label { font-size: 16px; }
   .form-input { height: 44px; font-size: 14px; padding: 8px 12px; border-radius: 8px; flex-direction: column;}
   textarea.form-input { min-height: 80px; }
-  .btn-send   { font-size: 16px; padding: 14px 20px; border-radius: 14px; align-self: stretch; justify-content: center; }
+  .btn-send   { font-size: 16px; padding: 14px 20px; border-radius: 14px; align-self: flex-start; width: auto; }
 
   /* ── FOOTER ── */
   footer { font-size: 12px; padding: 20px 16px; }
