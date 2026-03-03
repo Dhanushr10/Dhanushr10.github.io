@@ -33,6 +33,18 @@ body {
   background: #fff;
   color: #000;
   overflow-x: hidden;
+  background-color: #fff;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 24px;
+  background: #fff;
+  z-index: 999;
 }
 
 img { display: block; max-width: 100%; }
@@ -47,7 +59,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 6px 12px;
-  background: rgba(255,255,255,.2);
+  background: rgba(255,255,255,0.85);
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
   border-bottom: 1px solid rgba(0,0,0,.25);
@@ -704,11 +716,9 @@ section { position: relative; width: 100%; }
 .msg-title { font-family: var(--font-serif); font-size: 38px; font-weight: 700; }
 .msg-sub   { font-family: var(--font-serif); font-size: 22px; line-height: 1.5; }
 
-.form-row {
-  display: flex; gap: 0; align-items: flex-start; width: 100%;
-}
-.form-col { flex: 1; display: flex; flex-direction: column; gap: 10px; }
-.form-col:first-child { padding-right: 30px; }
+.form-row   { flex-direction: column; gap: 14px; width: 100%; }
+  .form-col   { width: 100%; flex: none; }
+  .form-col:first-child, .form-col:last-child { padding: 0; width: 100%; }
 .form-col:last-child  { padding-left: 30px; }
 
 .form-group { display: flex; flex-direction: column; gap: 10px; }
