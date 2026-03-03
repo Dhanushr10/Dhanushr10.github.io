@@ -73,7 +73,7 @@ function handleSend() {
   const name    = document.getElementById('f-name').value.trim();
   const email   = document.getElementById('f-email').value.trim();
   const subject = document.getElementById('f-subject').value.trim();
-  const message = document.getElementById('f-msg').value.trim();
+  const msg     = document.getElementById('f-msg').value.trim();
 
   if (!name) {
     showToast('Please enter your name ✏️');
@@ -81,22 +81,41 @@ function handleSend() {
     return;
   }
   if (!email || !email.includes('@')) {
-    showToast('Please enter a valid email address 📧');
+    showToast('Please enter a valid email 📧');
     document.getElementById('f-email').focus();
     return;
   }
-  if (!message) {
+  if (!msg) {
     showToast('Please enter a message 💬');
     document.getElementById('f-msg').focus();
     return;
   }
 
-  /* Clear fields */
-  ['f-name', 'f-email', 'f-subject', 'f-msg'].forEach(id => {
-    document.getElementById(id).value = '';
-  });
+  const btn = document.querySelector('.btn-send');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
 
-  showToast("Message sent! I'll get back to you soon 🙌");
+  const SHEET_URL = 'https://script.google.com/macros/s/AKfycbx69rmuj7TH5Be0blvUDzqZRKs69s7m8l8XkKygn23Uge4ar7W7LIaqPdz9VNcBGgBx/exec';
+
+  fetch(SHEET_URL, {
+    method: 'POST',
+    mode:   'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name, email, subject, message: msg })
+  })
+  .then(() => {
+    showToast("Message sent! I'll get back to you soon 🙌");
+    ['f-name', 'f-email', 'f-subject', 'f-msg'].forEach(id => {
+      document.getElementById(id).value = '';
+    });
+    btn.innerHTML = `<svg width="28" height="28" fill="none" viewBox="0 0 30 30"><path d="M3 15L27 3l-6 12 6 12L3 15z" stroke="white" stroke-width="2" stroke-linejoin="round"/></svg> Send Message`;
+    btn.disabled = false;
+  })
+  .catch(() => {
+    showToast('Something went wrong. Please try again ❌');
+    btn.innerHTML = `<svg width="28" height="28" fill="none" viewBox="0 0 30 30"><path d="M3 15L27 3l-6 12 6 12L3 15z" stroke="white" stroke-width="2" stroke-linejoin="round"/></svg> Send Message`;
+    btn.disabled = false;
+  });
 }
 
 /* ── ENTER key submits form ───────────────── */
