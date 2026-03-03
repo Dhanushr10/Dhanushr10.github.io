@@ -716,12 +716,20 @@ section { position: relative; width: 100%; }
 .msg-title { font-family: var(--font-serif); font-size: 38px; font-weight: 700; }
 .msg-sub   { font-family: var(--font-serif); font-size: 22px; line-height: 1.5; }
 
-.form-row                                   { flex-direction: column; gap: 14px; width: 100%; }
-.form-col                                   { width: 100%; }
-.form-col:first-child, .form-col:last-child { padding: 0; width: 100%; }
-.form-col .form-input                       { width: 100%; }
-.form-col   { width: 100%; flex: none; }
+.form-row {
+  display: flex; gap: 0; align-items: flex-start; width: 100%;
+}
+.form-col { flex: 1; display: flex; flex-direction: column; gap: 10px; }
+.form-col:first-child { padding-right: 30px; }
 .form-col:last-child  { padding-left: 30px; }
+
+@media (max-width: 480px) {
+  .form-row             { flex-direction: column; gap: 14px; width: 100%; }
+  .form-col             { width: 100%; flex: none; }
+  .form-col:first-child { padding-right: 0; }
+  .form-col:last-child  { padding-left: 0; }
+  .form-col .form-input { width: 100%; }
+}
 
 .form-group { display: flex; flex-direction: column; gap: 10px; }
 .form-label { font-family: var(--font-serif); font-size: 26px; font-weight: 700; }
