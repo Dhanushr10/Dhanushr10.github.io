@@ -1014,8 +1014,8 @@ footer {
 
   .ci-card    { padding: 12px 16px; gap: 12px; border-radius: 14px; }
   .ci-emoji   { font-size: 20px; }
-  .ci-email   { font-size: 13px; }
-  .ci-phone, .ci-loc { font-size: 14px; }
+  .ci-email   { font-size: 16px; }
+  .ci-phone, .ci-loc { font-size: 16px; }
 
   .social-card  { padding: 16px 16px 16px 20px; border-radius: 14px; gap: 8px; }
   .social-title { font-size: 18px; }
