@@ -884,8 +884,8 @@ footer {
   .hero-desc { font-size: 14px; line-height: 1.6; color: #555; }
 
   .hero-btns { gap: 12px; justify-content: center; flex-wrap: nowrap; }
-  .btn-primary  { font-size: 13px; padding: 10px 16px; }
-  .btn-secondary{ font-size: 13px; padding: 10px 16px; }
+  .btn-primary  { font-size: 16px; padding: 12px 22px; }
+  .btn-secondary{ font-size: 16px; padding: 12px 22px; }
 
   .hero-socials { justify-content: center; gap: 16px; }
   .social-icon  { width: 32px; height: 32px; }
