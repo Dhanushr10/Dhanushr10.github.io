@@ -631,6 +631,7 @@ section { position: relative; width: 100%; }
 
 .proj-label { font-family: var(--font-serif); font-size: 25px; color: #333; margin-top: 16px; }
 .proj-grid  { display: flex; gap: 50px; flex-wrap: wrap; margin-top: 30px; }
+.proj-grid .proj-card:last-child:nth-child(odd) { flex: 0 0 calc(50% - 25px); }
 
 .proj-card {
   flex: 1; min-width: 280px; max-width: 600px; height: 400px;
